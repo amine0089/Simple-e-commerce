@@ -1,0 +1,157 @@
+*{
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+header{
+	width: 90%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	height: 10vh;
+}
+.logo,.navigation,.cartt{
+	display: flex;
+}
+.logo{
+   flex: 1;
+}
+.logo h4{
+	font-weight: 400;
+	margin: 5px;
+}
+nav{
+	flex: 2;
+}
+.navigation{
+  justify-content: space-between;
+  list-style: none;
+}
+.cartt{
+  flex: 1;
+  justify-content: flex-end;
+}
+.one{
+	color:#585772;
+	text-decoration: none;
+}
+.container{
+	width: 90%;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	min-height: 80vh;
+}
+.deux-flex img{
+	height: 100%;
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
+.first-flex{
+	flex: 1;
+	justify-content: center;
+}
+.deux-flex{
+	flex:1;
+	height: 60vh;
+	text-align: center;
+	justify-content: flex-end;
+}
+.introduction h1{
+	font-size: 44px;
+	margin-bottom: 8px;
+	font-weight: 500;
+	background:linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+.introduction p{
+	font-size: 22px;
+	color:#585772;
+}
+.first-boton{
+	width: 150px;
+	height: 50px;
+	color: #c36cbb;
+	background: transparent;
+	border: 2px solid #c36cbb;
+	cursor: pointer;
+	font-size: 16px;
+}
+.sec-boton{
+	width: 150px;
+	height: 50px;
+	background: #c36cbb;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	color: white;
+	margin: 0px 0px 0px 30px;
+}
+.big{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.5;
+	height: 80%;
+}
+.mid{
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	z-index: -1;
+	height: 60%;
+	opacity: 0.4;
+}
+.small{
+	position: absolute;
+	bottom: 0%;
+	left: 20%;
+	opacity: 1;
+	z-index: -1;
+}
+.dotes{
+	display: flex;
+	justify-content: space-around;
+	width: 15%;
+	position: absolute;
+	right: 20%;
+}
+@keyframes drop{
+	0%{
+		opacity: 0;
+		transform: translateY(-80%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@media screen and (max-width:736px){
+	.container{
+		flex-direction: column;
+		text-align: center;
+	}
+	.introduction h1{
+		font-size: 30px;
+	}
+	.introduction h1 p{
+		font-size: 18px;
+	}
+	.dotes{
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%, 5%);
+	}
+	.deux-flex img{
+		height: 80%;
+	}
+	.big,.mid,.small{
+		opacity: 0.3;
+	}
+}
